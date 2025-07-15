@@ -1,0 +1,38 @@
+{
+  "name": "glauber-cerqueira-portfolio",
+  "version": "1.0.0",
+  "description": "Portfólio pessoal moderno e responsivo de Glauber Cerqueira - Desenvolvedor Web Full Stack",
+  "main": "index.html",
+  "keywords": [
+    "portfolio",
+    "web-developer",
+    "full-stack",
+    "html",
+    "css",
+    "javascript",
+    "responsive",
+    "modern",
+    "glassmorphism",
+    "animations"
+  ],
+  "author": {
+    "name": "Glauber Cerqueira",
+    "email": "glauber.santos.ramos@gmail.com",
+    "url": "https://github.com/glaubercerq"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/glaubercerq/portfolio"
+  },
+  "scripts": {
+    "dev": "live-server",
+    "build": "echo 'No build process needed for static site'",
+    "deploy": "echo 'Deploy using your preferred hosting service'"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
