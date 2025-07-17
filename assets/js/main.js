@@ -1,4 +1,4 @@
-// DOM Elements
+
 const cursor = document.querySelector('.cursor');
 const cursorTrail = document.querySelector('.cursor-trail');
 const navbar = document.querySelector('.navbar');
@@ -10,7 +10,7 @@ const skillBars = document.querySelectorAll('.skill-progress');
 const statNumbers = document.querySelectorAll('.stat-number');
 const contactForm = document.querySelector('.contact-form');
 
-// Custom Cursor
+
 let mouseX = 0;
 let mouseY = 0;
 let trailX = 0;
@@ -38,7 +38,7 @@ function animateTrail() {
 }
 animateTrail();
 
-// Cursor hover effects
+
 document.querySelectorAll('a, button, .project-card, .skill-category').forEach(element => {
     element.addEventListener('mouseenter', () => {
         cursor.style.transform = 'scale(1.5)';
@@ -51,7 +51,7 @@ document.querySelectorAll('a, button, .project-card, .skill-category').forEach(e
     });
 });
 
-// Particle Background
+
 function createParticles() {
     const particlesContainer = document.getElementById('particles');
     const particleCount = 50;
@@ -77,7 +77,7 @@ function createParticles() {
     }
 }
 
-// Navigation
+
 window.addEventListener('scroll', () => {
     if (window.scrollY > 100) {
         navbar.classList.add('scrolled');
@@ -119,7 +119,7 @@ function updateActiveNavLink() {
     });
 }
 
-// Smooth Scrolling
+
 navLinks.forEach(link => {
     link.addEventListener('click', (e) => {
         e.preventDefault();
@@ -135,7 +135,7 @@ navLinks.forEach(link => {
     });
 });
 
-// Scroll Reveal Animation
+
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -146,12 +146,12 @@ const observer = new IntersectionObserver((entries) => {
         if (entry.isIntersecting) {
             entry.target.classList.add('active');
             
-            // Animate skill bars
+            
             if (entry.target.classList.contains('skills')) {
                 animateSkillBars();
             }
             
-            // Animate stat numbers
+            
             if (entry.target.classList.contains('about')) {
                 animateStatNumbers();
             }
@@ -159,13 +159,13 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Add reveal class to elements and observe them
+
 document.querySelectorAll('section, .project-card, .skill-category').forEach(element => {
     element.classList.add('reveal');
     observer.observe(element);
 });
 
-// Skill Bars Animation
+
 function animateSkillBars() {
     skillBars.forEach(bar => {
         const width = bar.getAttribute('data-width');
@@ -175,7 +175,7 @@ function animateSkillBars() {
     });
 }
 
-// Stat Numbers Animation
+
 function animateStatNumbers() {
     statNumbers.forEach(stat => {
         const target = parseInt(stat.getAttribute('data-target'));
@@ -192,7 +192,7 @@ function animateStatNumbers() {
     });
 }
 
-// Typing Animation for Hero Title
+
 function typeWriter(element, text, speed = 100) {
     let i = 0;
     element.textContent = '';
@@ -207,26 +207,26 @@ function typeWriter(element, text, speed = 100) {
     type();
 }
 
-// Form Handling
+
 contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
     
-    // Get form data
+   
     const formData = new FormData(contactForm);
     const name = formData.get('name');
     const email = formData.get('email');
     const subject = formData.get('subject');
     const message = formData.get('message');
     
-    // Simulate form submission
+    
     showNotification('Mensagem enviada com sucesso! Entrarei em contato em breve.', 'success');
     contactForm.reset();
     
-    // In a real application, you would send the data to a server
+    
     console.log('Form submitted:', { name, email, subject, message });
 });
 
-// Notification System
+
 function showNotification(message, type = 'info') {
     const notification = document.createElement('div');
     notification.className = `notification ${type}`;
@@ -237,7 +237,7 @@ function showNotification(message, type = 'info') {
         </div>
     `;
     
-    // Add notification styles
+    
     const style = `
         .notification {
             position: fixed;
@@ -284,7 +284,7 @@ function showNotification(message, type = 'info') {
         }
     `;
     
-    // Add styles if not already added
+    
     if (!document.querySelector('#notification-styles')) {
         const styleElement = document.createElement('style');
         styleElement.id = 'notification-styles';
@@ -294,12 +294,12 @@ function showNotification(message, type = 'info') {
     
     document.body.appendChild(notification);
     
-    // Show notification
+    
     setTimeout(() => {
         notification.classList.add('show');
     }, 100);
     
-    // Close notification
+    
     const closeBtn = notification.querySelector('.notification-close');
     closeBtn.addEventListener('click', () => {
         notification.classList.remove('show');
@@ -308,7 +308,7 @@ function showNotification(message, type = 'info') {
         }, 300);
     });
     
-    // Auto close after 5 seconds
+    
     setTimeout(() => {
         if (document.body.contains(notification)) {
             notification.classList.remove('show');
@@ -321,7 +321,7 @@ function showNotification(message, type = 'info') {
     }, 5000);
 }
 
-// Parallax Effect
+
 window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
     const parallaxElements = document.querySelectorAll('.hero-shape, .floating-card');
@@ -333,7 +333,7 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// Three.js-like particle system
+
 class ParticleSystem {
     constructor() {
         this.particles = [];
@@ -384,15 +384,15 @@ class ParticleSystem {
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
         
         this.particles.forEach(particle => {
-            // Update position
+            
             particle.x += particle.vx;
             particle.y += particle.vy;
             
-            // Bounce off edges
+            
             if (particle.x < 0 || particle.x > this.canvas.width) particle.vx *= -1;
             if (particle.y < 0 || particle.y > this.canvas.height) particle.vy *= -1;
             
-            // Mouse interaction
+            
             const dx = this.mouse.x - particle.x;
             const dy = this.mouse.y - particle.y;
             const distance = Math.sqrt(dx * dx + dy * dy);
@@ -402,13 +402,13 @@ class ParticleSystem {
                 particle.vy += dy * 0.0001;
             }
             
-            // Draw particle
+            
             this.ctx.beginPath();
             this.ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
             this.ctx.fillStyle = `rgba(102, 126, 234, ${particle.opacity})`;
             this.ctx.fill();
             
-            // Connect nearby particles
+            
             this.particles.forEach(otherParticle => {
                 const dx2 = particle.x - otherParticle.x;
                 const dy2 = particle.y - otherParticle.y;
@@ -428,7 +428,7 @@ class ParticleSystem {
     }
 }
 
-// Magnetic effect for buttons
+
 document.querySelectorAll('.btn, .project-link, .social-link').forEach(element => {
     element.addEventListener('mousemove', (e) => {
         const rect = element.getBoundingClientRect();
@@ -443,7 +443,7 @@ document.querySelectorAll('.btn, .project-link, .social-link').forEach(element =
     });
 });
 
-// Tilt effect for cards
+
 document.querySelectorAll('.project-card, .skill-category').forEach(card => {
     card.addEventListener('mousemove', (e) => {
         const rect = card.getBoundingClientRect();
@@ -464,9 +464,9 @@ document.querySelectorAll('.project-card, .skill-category').forEach(card => {
     });
 });
 
-// Loading animation
+
 window.addEventListener('load', () => {
-    // Remove loading screen if exists
+    
     const loadingScreen = document.querySelector('.loading-screen');
     if (loadingScreen) {
         loadingScreen.style.opacity = '0';
@@ -475,11 +475,11 @@ window.addEventListener('load', () => {
         }, 500);
     }
     
-    // Initialize everything
+    
     createParticles();
     new ParticleSystem();
     
-    // Animate hero elements
+    
     setTimeout(() => {
         const heroElements = document.querySelectorAll('.hero-content > *');
         heroElements.forEach((element, index) => {
@@ -491,9 +491,9 @@ window.addEventListener('load', () => {
     }, 500);
 });
 
-// Resize handler
+
 window.addEventListener('resize', () => {
-    // Update particle positions on resize
+    
     const particles = document.querySelectorAll('.particle');
     particles.forEach(particle => {
         particle.style.left = Math.random() * window.innerWidth + 'px';
@@ -501,7 +501,7 @@ window.addEventListener('resize', () => {
     });
 });
 
-// Easter egg - Konami code
+
 let konamiCode = [];
 const konamiSequence = [
     'ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown',
@@ -525,7 +525,7 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
-// Performance optimization
+
 let ticking = false;
 
 function requestTick() {
@@ -536,11 +536,11 @@ function requestTick() {
 }
 
 function updateAnimations() {
-    // Update any animation-related code here
+    
     ticking = false;
 }
 
-// Throttle scroll events
+
 let scrollTimeout;
 window.addEventListener('scroll', () => {
     if (scrollTimeout) {
@@ -551,11 +551,11 @@ window.addEventListener('scroll', () => {
     }, 10);
 });
 
-// Initialize everything when DOM is loaded
+
 document.addEventListener('DOMContentLoaded', () => {
     console.log('🚀 Portfolio carregado com sucesso!');
     
-    // Add some fun console messages
+    
     console.log('%c👋 Olá, desenvolvedor curioso!', 'color: #667eea; font-size: 20px; font-weight: bold;');
     console.log('%cGostou do site? Vamos trabalhar juntos!', 'color: #E94560; font-size: 14px;');
     console.log('%cContato: seu.email@exemplo.com', 'color: #16537e; font-size: 12px;');
