@@ -1,4 +1,4 @@
-/* Reset e Configurações Básicas */
+
 * {
     margin: 0;
     padding: 0;
@@ -33,7 +33,7 @@ body {
     cursor: none;
 }
 
-/* Custom Cursor */
+
 .cursor {
     position: fixed;
     width: 20px;
@@ -58,7 +58,7 @@ body {
     transition: all 0.3s ease;
 }
 
-/* Particle Background */
+
 #particles {
     position: fixed;
     top: 0;
@@ -81,14 +81,14 @@ body {
     50% { transform: translateY(-20px) rotate(180deg); }
 }
 
-/* Container */
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/* Navigation */
+
 .navbar {
     position: fixed;
     top: 0;
@@ -175,7 +175,7 @@ body {
     transition: var(--transition);
 }
 
-/* Hero Section */
+
 .hero {
     min-height: 100vh;
     display: flex;
@@ -314,7 +314,7 @@ body {
     transform: translateY(-2px);
 }
 
-/* Hero Visual */
+
 .hero-visual {
     position: relative;
     display: flex;
@@ -389,7 +389,7 @@ body {
 }
 
 
-/* Section Styles */
+
 section {
     padding: 100px 0;
     position: relative;
@@ -424,7 +424,7 @@ section {
     opacity: 0.3;
 }
 
-/* About Section */
+
 .about-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -519,7 +519,7 @@ section {
     opacity: 0;
 }
 
-/* Skills Section */
+
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -586,7 +586,7 @@ section {
     font-weight: 600;
 }
 
-/* Projects Section */
+
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -636,7 +636,7 @@ section {
     color: rgba(255, 255, 255, 1);
 }
 
-/* Gradientes específicos por tipo de projeto */
+
 .project-card:nth-child(1) .project-image {
     background: linear-gradient(135deg, #2D5016, #4A7C59);
 }
@@ -736,7 +736,7 @@ section {
     border: 1px solid rgba(102, 126, 234, 0.3);
 }
 
-/* Project Status Badge */
+
 .project-status {
     position: absolute;
     top: 15px;
@@ -759,7 +759,7 @@ section {
     50% { opacity: 0.8; }
 }
 
-/* Hover effects específicos para projetos em desenvolvimento */
+
 .project-card:has(.project-status) .project-overlay {
     background: linear-gradient(135deg, rgba(255, 107, 107, 0.8), rgba(255, 217, 61, 0.8));
 }
@@ -791,7 +791,7 @@ section {
     50% { opacity: 0.8; }
 }
 
-/* Contact Section */
+
 .contact-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -855,7 +855,7 @@ section {
     transform: translateY(-3px);
 }
 
-/* Contact Form */
+
 .contact-form {
     background: var(--bg-card);
     backdrop-filter: var(--blur-effect);
@@ -920,7 +920,7 @@ section {
     width: 100%;
 }
 
-/* Footer */
+
 .footer {
     background: var(--bg-dark);
     border-top: 1px solid var(--border-color);
@@ -933,7 +933,7 @@ section {
     margin-bottom: 0.5rem;
 }
 
-/* Animations */
+
 @keyframes slideUp {
     from {
         opacity: 0;
@@ -954,7 +954,7 @@ section {
     }
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
@@ -1059,7 +1059,7 @@ section {
     }
 }
 
-/* Scroll Reveal Animation */
+
 .reveal {
     opacity: 0;
     transform: translateY(50px);
@@ -1071,7 +1071,7 @@ section {
     transform: translateY(0);
 }
 
-/* Custom Scrollbar */
+
 ::-webkit-scrollbar {
     width: 8px;
 }
