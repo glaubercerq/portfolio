@@ -1,6 +1,6 @@
-/* Accessibility Enhancements */
 
-/* Skip Link */
+
+
 .skip-link {
     position: absolute;
     top: -40px;
@@ -19,7 +19,7 @@
     top: 6px;
 }
 
-/* Screen Reader Only Content */
+
 .sr-only {
     position: absolute;
     width: 1px;
@@ -32,7 +32,7 @@
     border: 0;
 }
 
-/* Error Messages */
+
 .error-message {
     color: #e74c3c;
     font-size: 0.875rem;
@@ -49,7 +49,7 @@
     margin-top: 0.5rem;
 }
 
-/* Submit Status */
+
 .submit-status {
     margin-top: 1rem;
     padding: 0.75rem;
@@ -72,7 +72,7 @@
     display: block;
 }
 
-/* High Contrast Mode Support */
+
 @media (prefers-contrast: high) {
     :root {
         --text-color: #000000;
@@ -88,7 +88,7 @@
     }
 }
 
-/* Reduced Motion Support */
+
 @media (prefers-reduced-motion: reduce) {
     *,
     *::before,
@@ -113,7 +113,7 @@
     }
 }
 
-/* Focus Indicators */
+
 a:focus,
 button:focus,
 input:focus,
@@ -123,13 +123,13 @@ select:focus {
     outline-offset: 2px;
 }
 
-/* Focus within for form groups */
+
 .form-group:focus-within label {
     color: var(--primary-color);
     transform: translateY(-20px) scale(0.8);
 }
 
-/* Keyboard Navigation for Skip Links */
+
 .nav-menu a:focus,
 .project-link:focus,
 .social-link:focus {
@@ -138,7 +138,7 @@ select:focus {
     border-radius: 8px;
 }
 
-/* Improve color contrast for better readability */
+
 .tech-tag {
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
@@ -147,20 +147,20 @@ select:focus {
     font-weight: 500;
 }
 
-/* Enhance button accessibility */
+
 .btn:focus {
     transform: translateY(-2px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
-/* Progress bar accessibility */
+
 .skill-bar[role="progressbar"]::after {
     content: attr(aria-label);
     position: absolute;
     left: -9999px;
 }
 
-/* Ensure sufficient color contrast for links */
+
 .contact-item a {
     color: inherit;
     text-decoration: none;
@@ -173,7 +173,7 @@ select:focus {
     border-bottom-color: var(--primary-color);
 }
 
-/* Mobile accessibility improvements */
+
 @media (max-width: 768px) {
     .nav-link,
     .btn,
@@ -195,7 +195,7 @@ select:focus {
     }
 }
 
-/* Print styles for better accessibility */
+
 @media print {
     .cursor,
     .cursor-trail,
