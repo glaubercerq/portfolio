@@ -1,14 +1,14 @@
 User-agent: *
 Allow: /
 
-# Sitemap
+
 Sitemap: https://glaubercerq.github.io/portfolio/sitemap.xml
 
-# Block access to source files
+
 Disallow: /assets/
 Disallow: /docs/
 Disallow: /*.css$
 Disallow: /*.js$
 
-# Allow specific assets that should be crawled
+
 Allow: /assets/images/profile.jpeg
